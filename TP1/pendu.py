@@ -65,3 +65,4 @@ if mot == MotDecouvert:
 # Si le nombre d'erreur est trop grand, on affiche PERDU
 elif compteur >= 7:
     print("Vous avez perdu", nom)
+    print("Le mot était", mot)
