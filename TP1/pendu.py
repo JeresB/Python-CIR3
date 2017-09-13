@@ -8,6 +8,7 @@ from sys import argv
 essaiRestant = 7  # Erreur Maximum
 compteur = 0  # Nombre d'erreur actuelle
 MotDecouvert = ""  # Mot découvert -> se complète au fur et à mesure
+lettreUtilise = ""
 
 # On récupère un mot alétoire dans un fichier fournit en argument
 mot = choice(open(argv[1]).readlines()).strip()
@@ -33,10 +34,16 @@ while mot != MotDecouvert:
 
     print("Erreur", compteur, "/ 7")  # On affiche le compteur d'erreur
     print("Mot :", MotDecouvert)  # On affiche le mot découvert
+    print("")
+
+    # On affiche les lettres utilisées
+    print("Lettres utilisées :", lettreUtilise)
 
     # On demande une lettre à l'utilisateur
     lettre = input('Entrez une lettre > ')
     lettre = lettre.upper()  # On met en majuscule la lettre Entrez
+    # On ajoute la lettre aux lettres déja utilisées
+    lettreUtilise = lettreUtilise + lettre
 
     print("")
 

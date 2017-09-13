@@ -3,8 +3,8 @@
 
 def minMaxBoucle(liste):
     """Fonction pour trouver le min et le max d'une liste avec une boucle."""
-    minimum = 99999999
-    maximum = -9999999
+    minimum = float("inf")
+    maximum = -float("inf")
 
     for index in range(0, 5):
         liste[index] = int(liste[index])
