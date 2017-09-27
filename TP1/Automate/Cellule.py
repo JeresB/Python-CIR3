@@ -1,21 +1,21 @@
 """Class Cellules."""
 
 
-class Cellule(object):
+class Cellule:
     """docstring for Cellule."""
 
-    def __init__(self, arg):
+    def __init__(self, estVivante):
         """Constructor."""
         super(Cellule, self).__init__()
-        self.__estVivante = arg
+        self.__estVivante = estVivante
 
     def affiche(self):
         """Methode Affiche."""
         if self.__estVivante == 1:
-            print("@ ")
+            print("@ ", end='')
         else:
-            print("- ")
+            print("- ", end='')
 
-    def estVivante(self):
+    def getEstVivante(self):
         """Getter estVivante."""
         return self.__estVivante
